@@ -2,6 +2,9 @@
   "name": "hoangngoclam/test_lib",
   "description": "This is first package Jay upload into packagist",
   "type": "composer-plugin",
+  "require": {
+    "monolog/monolog": "version"
+  },
   "license": [
     "OSL-3.0"
   ],
