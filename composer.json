@@ -1,13 +1,12 @@
 {
   "name": "hoangngoclam/test_lib",
   "description": "This is first package Jay upload into packagist",
-  "type": "composer-plugin",
+  "homepage": "https://github.com/hoangngoclam/test_lib",
   "require": {
-    "monolog/monolog": "3.2.0"
+    "php": ">=7.0"
   },
-  "license": [
-    "OSL-3.0"
-  ],
+  "type": "library",
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "Hoangngoclam\\TestLib\\": "src/"
