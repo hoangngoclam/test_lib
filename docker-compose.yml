@@ -11,7 +11,7 @@ services:
     container_name: test_libXampp
     restart: always
     volumes:
-      - ./source:/opt/lampp/htdocs/www
+      - ./:/opt/lampp/htdocs/www
       - test_lib-data-volume:/opt/lampp
     command: bash -c " /opt/lampp/lampp start && tail -f .env"
     ports:
