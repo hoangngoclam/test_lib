@@ -1,18 +1,18 @@
 {
-    "name": "hoangngoclam/test_lib",
-    "description": "This is first package Jay upload into packagist",
-    "type": "composer-plugin",
-    "require": {
-        "monolog/monolog": "1.24"
-    },
-    "autoload": {
-        "psr-4": {
-            "Hoangngoclam\\TestLib\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "hoangngoclam-JAY"
-        }
-    ]
+  "name": "hoangngoclam/test_lib",
+  "description": "This is first package Jay upload into packagist",
+  "type": "composer-plugin",
+  "license": [
+    "OSL-3.0"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Hoangngoclam\\TestLib\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "hoangngoclam-JAY"
+    }
+  ]
 }
