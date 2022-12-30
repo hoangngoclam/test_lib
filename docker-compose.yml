@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+
+  xampp:
+    build: 
+      context: ./.docker/xampp
+      dockerfile: DockerFile
+    platform: linux/x86_64
+    working_dir: /opt/lampp/htdocs/www
+    container_name: projectXampp
+    restart: always
+    volumes:
+      - ./source:/opt/lampp/htdocs/www
+      - project-data-volume:/opt/lampp
+    command: bash -c " /opt/lampp/lampp start && tail -f .env"
+    ports:
+      - "3306:3306"
+      - "80:80"
+      - "8000:8000"
+      - "9000:9000"
+    networks:
+      - project-networks
+  
+networks:
+  project-networks:
+    driver: bridge
+
+volumes:
+  project-data-volume:

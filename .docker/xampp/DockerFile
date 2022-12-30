@@ -1,0 +1,10 @@
+FROM tomsik68/xampp:8.1.6
+
+#download composer
+RUN curl -sS https://getcomposer.org/installer -o composer-setup.php
+
+#move php from xampp into root bin
+RUN ln -s /opt/lampp/bin/php /usr/bin/php
+
+#install composer
+RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
