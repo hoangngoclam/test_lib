@@ -1,25 +1,22 @@
-# Run source code
 
-Make sure your computer have already installed **docker**
+## Description
+This is library to convert UTF-8 strings in to normal string
+Copy code from: https://xuanthulab.net/su-dung-composer-trong-lap-trinh-php.html
 
-**Bước 1: Clone source code:**
+`trương hoàng ngọc lâm` -> `truong hoang ngoc lam`
 
-```
-git clone git@github.com:XXX.git
-```
-**Bước 2: cd into folder cloned:**
-```
-cd XXX
-```
-**Bước 3: Run docker:**
+## Install
 
 ```
-docker-compose up 
+composer require hoangngoclam/test_lib
 ```
-Run until you can visit this link: http://localhost/dashboard/
+## Using
 
-**Bước 4: Vào thử trang web**
+```
+<?php
+use Hoangngoclam\TestLib\Convert;
+$text = Convert::convertLatin("Xin chào Việt Nam");
+echo ($text);
+```
 
-Visiting this link : http://localhost/www/index.php
 
-If you see text: "Hello world!!!" => install success
