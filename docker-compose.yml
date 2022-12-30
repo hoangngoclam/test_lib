@@ -8,11 +8,11 @@ services:
       dockerfile: DockerFile
     platform: linux/x86_64
     working_dir: /opt/lampp/htdocs/www
-    container_name: projectXampp
+    container_name: test_libXampp
     restart: always
     volumes:
       - ./source:/opt/lampp/htdocs/www
-      - project-data-volume:/opt/lampp
+      - test_lib-data-volume:/opt/lampp
     command: bash -c " /opt/lampp/lampp start && tail -f .env"
     ports:
       - "3306:3306"
@@ -20,11 +20,11 @@ services:
       - "8000:8000"
       - "9000:9000"
     networks:
-      - project-networks
+      - test_lib-networks
   
 networks:
-  project-networks:
+  test_lib-networks:
     driver: bridge
 
 volumes:
-  project-data-volume:
+  test_lib-data-volume:
